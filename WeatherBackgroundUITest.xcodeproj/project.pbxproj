@@ -13,6 +13,9 @@
 		5AA9DBD22A484C6900EE8F7C /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBD12A484C6900EE8F7C /* Star.swift */; };
 		5AA9DBD42A484C7D00EE8F7C /* StarField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBD32A484C7D00EE8F7C /* StarField.swift */; };
 		5AA9DBD62A484C8700EE8F7C /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBD52A484C8700EE8F7C /* StarsView.swift */; };
+		5AA9DBD92A485CA500EE8F7C /* Storm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBD82A485CA500EE8F7C /* Storm.swift */; };
+		5AA9DBDB2A485CFF00EE8F7C /* StormDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBDA2A485CFF00EE8F7C /* StormDrop.swift */; };
+		5AA9DBDD2A48613000EE8F7C /* StrormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBDC2A48613000EE8F7C /* StrormView.swift */; };
 		5AECB71B2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */; };
 		5AECB71D2A44E4C9008AB807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AECB71C2A44E4C9008AB807 /* ContentView.swift */; };
 		5AECB71F2A44E4CA008AB807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AECB71E2A44E4CA008AB807 /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		5AA9DBD12A484C6900EE8F7C /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		5AA9DBD32A484C7D00EE8F7C /* StarField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarField.swift; sourceTree = "<group>"; };
 		5AA9DBD52A484C8700EE8F7C /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
+		5AA9DBD82A485CA500EE8F7C /* Storm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storm.swift; sourceTree = "<group>"; };
+		5AA9DBDA2A485CFF00EE8F7C /* StormDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormDrop.swift; sourceTree = "<group>"; };
+		5AA9DBDC2A48613000EE8F7C /* StrormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrormView.swift; sourceTree = "<group>"; };
 		5AECB7172A44E4C9008AB807 /* WeatherBackgroundUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherBackgroundUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBackgroundUITestApp.swift; sourceTree = "<group>"; };
 		5AECB71C2A44E4C9008AB807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,13 +76,6 @@
 			path = Stars;
 			sourceTree = "<group>";
 		};
-		5AA9DBCF2A484C2A00EE8F7C /* Rain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Rain;
-			sourceTree = "<group>";
-		};
 		5AA9DBD02A484C5600EE8F7C /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +84,16 @@
 				5AA9DBC72A47001900EE8F7C /* Color-Custom.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		5AA9DBD72A485C9500EE8F7C /* Storm */ = {
+			isa = PBXGroup;
+			children = (
+				5AA9DBD82A485CA500EE8F7C /* Storm.swift */,
+				5AA9DBDA2A485CFF00EE8F7C /* StormDrop.swift */,
+				5AA9DBDC2A48613000EE8F7C /* StrormView.swift */,
+			);
+			path = Storm;
 			sourceTree = "<group>";
 		};
 		5AECB70E2A44E4C9008AB807 = {
@@ -110,7 +119,7 @@
 				5AECB71C2A44E4C9008AB807 /* ContentView.swift */,
 				5AA9DBCD2A484C1A00EE8F7C /* Clouds */,
 				5AA9DBCE2A484C2300EE8F7C /* Stars */,
-				5AA9DBCF2A484C2A00EE8F7C /* Rain */,
+				5AA9DBD72A485C9500EE8F7C /* Storm */,
 				5AA9DBD02A484C5600EE8F7C /* Misc */,
 				5AECB71E2A44E4CA008AB807 /* Assets.xcassets */,
 				5AECB7202A44E4CA008AB807 /* Preview Content */,
@@ -196,8 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA9DBDB2A485CFF00EE8F7C /* StormDrop.swift in Sources */,
 				5AA9DBD22A484C6900EE8F7C /* Star.swift in Sources */,
 				5AA9DBCC2A47062100EE8F7C /* Color-Interpolation.swift in Sources */,
+				5AA9DBDD2A48613000EE8F7C /* StrormView.swift in Sources */,
+				5AA9DBD92A485CA500EE8F7C /* Storm.swift in Sources */,
 				5AECB71D2A44E4C9008AB807 /* ContentView.swift in Sources */,
 				5AECB7292A44E5C5008AB807 /* Cloud.swift in Sources */,
 				5AECB71B2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift in Sources */,
