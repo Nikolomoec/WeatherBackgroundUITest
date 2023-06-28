@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A80E5A82A4C880C000AB75B /* LightningBolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80E5A72A4C880C000AB75B /* LightningBolt.swift */; };
+		5A80E5AA2A4C88AF000AB75B /* Lightning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80E5A92A4C88AF000AB75B /* Lightning.swift */; };
+		5A80E5AC2A4C8C89000AB75B /* LightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80E5AB2A4C8C89000AB75B /* LightningView.swift */; };
 		5AA9DBC82A47001900EE8F7C /* Color-Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBC72A47001900EE8F7C /* Color-Custom.swift */; };
 		5AA9DBCA2A4702E700EE8F7C /* Array-GradientStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBC92A4702E700EE8F7C /* Array-GradientStop.swift */; };
 		5AA9DBCC2A47062100EE8F7C /* Color-Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9DBCB2A47062100EE8F7C /* Color-Interpolation.swift */; };
@@ -19,6 +22,7 @@
 		5ADE32012A49A8AA00B7BC87 /* ResidueDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE32002A49A8AA00B7BC87 /* ResidueDrop.swift */; };
 		5ADE32042A49AB8700B7BC87 /* Residue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE32032A49AB8700B7BC87 /* Residue.swift */; };
 		5ADE32062A49B2B500B7BC87 /* ResidueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE32052A49B2B500B7BC87 /* ResidueView.swift */; };
+		5ADE32082A49B4D500B7BC87 /* WeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE32072A49B4D500B7BC87 /* WeatherDetailsView.swift */; };
 		5AECB71B2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */; };
 		5AECB71D2A44E4C9008AB807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AECB71C2A44E4C9008AB807 /* ContentView.swift */; };
 		5AECB71F2A44E4CA008AB807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AECB71E2A44E4CA008AB807 /* Assets.xcassets */; };
@@ -29,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A80E5A72A4C880C000AB75B /* LightningBolt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningBolt.swift; sourceTree = "<group>"; };
+		5A80E5A92A4C88AF000AB75B /* Lightning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightning.swift; sourceTree = "<group>"; };
+		5A80E5AB2A4C8C89000AB75B /* LightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningView.swift; sourceTree = "<group>"; };
 		5AA9DBC72A47001900EE8F7C /* Color-Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Custom.swift"; sourceTree = "<group>"; };
 		5AA9DBC92A4702E700EE8F7C /* Array-GradientStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array-GradientStop.swift"; sourceTree = "<group>"; };
 		5AA9DBCB2A47062100EE8F7C /* Color-Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Interpolation.swift"; sourceTree = "<group>"; };
@@ -41,6 +48,7 @@
 		5ADE32002A49A8AA00B7BC87 /* ResidueDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidueDrop.swift; sourceTree = "<group>"; };
 		5ADE32032A49AB8700B7BC87 /* Residue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Residue.swift; sourceTree = "<group>"; };
 		5ADE32052A49B2B500B7BC87 /* ResidueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidueView.swift; sourceTree = "<group>"; };
+		5ADE32072A49B4D500B7BC87 /* WeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsView.swift; sourceTree = "<group>"; };
 		5AECB7172A44E4C9008AB807 /* WeatherBackgroundUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherBackgroundUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBackgroundUITestApp.swift; sourceTree = "<group>"; };
 		5AECB71C2A44E4C9008AB807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A80E5A62A4C87EA000AB75B /* Lightning bolts */ = {
+			isa = PBXGroup;
+			children = (
+				5A80E5A92A4C88AF000AB75B /* Lightning.swift */,
+				5A80E5A72A4C880C000AB75B /* LightningBolt.swift */,
+				5A80E5AB2A4C8C89000AB75B /* LightningView.swift */,
+			);
+			path = "Lightning bolts";
+			sourceTree = "<group>";
+		};
 		5AA9DBCD2A484C1A00EE8F7C /* Clouds */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +117,7 @@
 				5AA9DBDA2A485CFF00EE8F7C /* StormDrop.swift */,
 				5AA9DBDC2A48613000EE8F7C /* StrormView.swift */,
 				5ADE32022A49A8AE00B7BC87 /* Splashes */,
+				5A80E5A62A4C87EA000AB75B /* Lightning bolts */,
 			);
 			path = Storm;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 			children = (
 				5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */,
 				5AECB71C2A44E4C9008AB807 /* ContentView.swift */,
+				5ADE32072A49B4D500B7BC87 /* WeatherDetailsView.swift */,
 				5AA9DBCD2A484C1A00EE8F7C /* Clouds */,
 				5AA9DBCE2A484C2300EE8F7C /* Stars */,
 				5AA9DBD72A485C9500EE8F7C /* Storm */,
@@ -230,14 +250,18 @@
 				5AA9DBD92A485CA500EE8F7C /* Storm.swift in Sources */,
 				5AECB71D2A44E4C9008AB807 /* ContentView.swift in Sources */,
 				5AECB7292A44E5C5008AB807 /* Cloud.swift in Sources */,
+				5ADE32082A49B4D500B7BC87 /* WeatherDetailsView.swift in Sources */,
 				5AECB71B2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift in Sources */,
 				5ADE32042A49AB8700B7BC87 /* Residue.swift in Sources */,
 				5ADE32062A49B2B500B7BC87 /* ResidueView.swift in Sources */,
 				5AECB72B2A44E779008AB807 /* CloudGroup.swift in Sources */,
 				5AA9DBD42A484C7D00EE8F7C /* StarField.swift in Sources */,
+				5A80E5A82A4C880C000AB75B /* LightningBolt.swift in Sources */,
 				5AA9DBCA2A4702E700EE8F7C /* Array-GradientStop.swift in Sources */,
 				5AA9DBC82A47001900EE8F7C /* Color-Custom.swift in Sources */,
 				5AA9DBD62A484C8700EE8F7C /* StarsView.swift in Sources */,
+				5A80E5AA2A4C88AF000AB75B /* Lightning.swift in Sources */,
+				5A80E5AC2A4C8C89000AB75B /* LightningView.swift in Sources */,
 				5AECB72D2A44EA3E008AB807 /* CloudsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,11 @@ struct ContentView: View {
     @State private var rainIntensity = 500.0
     @State private var rainAngle = 0.0
     
+    @State private var maximumBolts = 4.0
+    @State private var forkProbability = 20.0
+    
+    @State private var showingSetting = true
+    
     let backgroundTopStops: [Gradient.Stop] = [
         .init(color: .midnightStart, location: 0),
         .init(color: .midnightStart, location: 0.25),
@@ -25,7 +30,7 @@ struct ContentView: View {
         .init(color: .midnightStart, location: 0.82),
         .init(color: .midnightStart, location: 1)
     ]
-
+    
     let backgroundBottomStops: [Gradient.Stop] = [
         .init(color: .midnightEnd, location: 0),
         .init(color: .midnightEnd, location: 0.25),
@@ -47,7 +52,7 @@ struct ContentView: View {
         .init(color: .darkCloudStart, location: 0.82),
         .init(color: .darkCloudStart, location: 1)
     ]
-
+    
     let cloudBottomStops: [Gradient.Stop] = [
         .init(color: .darkCloudEnd, location: 0),
         .init(color: .darkCloudEnd, location: 0.25),
@@ -86,9 +91,13 @@ struct ContentView: View {
                 bottomTint: cloudBottomStops.interpolated(amount: time)
             )
             
+            LightningView(maximumBolts: Int(maximumBolts), forkProbability: Int(forkProbability))
+            
             if stormType != .none {
                 StrormView(type: stormType, direction: .degrees(rainAngle), strenght: Int(rainIntensity))
             }
+            
+            WeatherDetailsView(tintColor: backgroundTopStops.interpolated(amount: time), residueType: stormType, residueStrenght: rainIntensity)
         }
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -100,38 +109,63 @@ struct ContentView: View {
         )
         .safeAreaInset(edge: .bottom) {
             VStack {
-                Text(formattedTime)
-                    .padding(.top)
                 
-                Picker("Thickness", selection: $cloudThickness) {
-                    ForEach(Cloud.Thickness.allCases, id: \.self) { thickness in
-                        Text(String(describing: thickness).capitalized)
+                Button("Toogle Controls") {
+                    withAnimation {
+                        showingSetting.toggle()
                     }
                 }
-                .pickerStyle(.segmented)
                 
-                HStack {
-                    Text("Time:")
-                    Slider(value: $time)
-                }
-                .padding()
-                
-                Picker("Precipitation", selection: $stormType) {
-                    ForEach(Storm.Contents.allCases, id: \.self) { stormType in
-                        Text(String(describing: stormType).capitalized)
+                if showingSetting {
+                    VStack {
+                        Text(formattedTime)
+                            .padding(.top)
+                        
+                        Picker("Thickness", selection: $cloudThickness) {
+                            ForEach(Cloud.Thickness.allCases, id: \.self) { thickness in
+                                Text(String(describing: thickness).capitalized)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        
+                        HStack {
+                            Text("Time:")
+                            Slider(value: $time)
+                        }
+                        .padding()
+                        
+                        Picker("Precipitation", selection: $stormType) {
+                            ForEach(Storm.Contents.allCases, id: \.self) { stormType in
+                                Text(String(describing: stormType).capitalized)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        
+                        HStack {
+                            Text("Intensity")
+                            Slider(value: $rainIntensity, in: 0...1000)
+                        }
+                        .padding(.horizontal)
+                        
+                        HStack {
+                            Text("Angle")
+                            Slider(value: $rainAngle, in: 0...90)
+                        }
+                        .padding(.horizontal)
+                        
+                        HStack {
+                            Text("Max Bolts:")
+                            Slider(value: $maximumBolts, in: 0...10)
+                        }
+                        .padding(.horizontal)
+                        
+                        HStack {
+                            Text("Fork %")
+                            Slider(value: $forkProbability, in: 0...100)
+                        }
+                        .padding(.horizontal)
                     }
-                }
-                .pickerStyle(.segmented)
-                
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $rainIntensity, in: 0...1000)
-                }
-                .padding(.horizontal)
-                
-                HStack {
-                    Text("Angle")
-                    Slider(value: $rainAngle, in: 0...90)
+                    .transition(.move(edge: .bottom))
                 }
             }
             .padding(5)
