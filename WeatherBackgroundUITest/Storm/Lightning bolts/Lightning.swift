@@ -15,10 +15,12 @@ class Lightning {
     var bolts = [LightningBolt]()
     var state = LightningState.waiting
     var lastUpdate = Date.now
+    var lastRepeatingUpdate = Date.now
+    var lightningFrequency = Double.random(in: 5...15)
     var flashOpacity = 0.0
     
-    var maximumBolts: Int // 4
-    var forkProbability: Int // 20
+    var maximumBolts: Int
+    var forkProbability: Int
     
     init(maximumBolts: Int, forkProbability: Int) {
         self.maximumBolts = maximumBolts
@@ -31,7 +33,7 @@ class Lightning {
         
         switch state {
         case .waiting:
-            break
+            repeatingStrike(date: date)
             
         case .preparing:
             let startPosition = CGPoint(x: Double.random(in: 50...size.width - 50), y: 0)
@@ -75,7 +77,7 @@ class Lightning {
             
         case .fading:
             var allFaded = true
-            flashOpacity -= delta
+            flashOpacity -= delta * 1.2
             
             for bolt in bolts {
                 bolt.width -= delta * 15
@@ -92,9 +94,19 @@ class Lightning {
         }
     }
     
-    func stike() {
+    func strike() {
         guard state == .waiting else { return }
         
         state = .preparing
+    }
+    
+    func repeatingStrike(date: Date) {
+        let delta = date.timeIntervalSince1970 - lastRepeatingUpdate.timeIntervalSince1970
+        
+        if delta >= lightningFrequency {
+            lightningFrequency = Double.random(in: 5...15)
+            lastRepeatingUpdate = date
+            state = .preparing
+        }
     }
 }

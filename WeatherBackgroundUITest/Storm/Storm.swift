@@ -9,7 +9,7 @@ import SwiftUI
 
 class Storm {
     enum Contents: CaseIterable {
-        case none, rain, snow
+        case none, rain, snow, thunderstorm
     }
     
     var drops = [StormDrop]()

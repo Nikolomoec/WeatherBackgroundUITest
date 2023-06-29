@@ -10,6 +10,8 @@ import SwiftUI
 struct LightningView: View {
     var lightning: Lightning
     
+    @State private var lastUpdate = Date.now
+    
     var body: some View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
@@ -31,7 +33,7 @@ struct LightningView: View {
         }
         .ignoresSafeArea()
         .onTapGesture {
-            lightning.stike()
+            lightning.strike()
         }
     }
     
