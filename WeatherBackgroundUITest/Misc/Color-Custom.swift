@@ -25,4 +25,7 @@ extension Color {
     static let sunriseCloudEnd = Color.sunriseEnd
     static let sunsetCloudStart = Color.lightCloudStart
     static let sunsetCloudEnd = Color.sunsetEnd
+    
+    static let rainStart = Color(red: 0.36, green: 0.44, blue: 0.51)
+    static let rainEnd = Color(red: 0.18, green: 0.25, blue: 0.30)
 }

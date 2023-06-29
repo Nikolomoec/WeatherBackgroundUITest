@@ -75,6 +75,11 @@ struct ContentView: View {
         .init(color: .white, location: 1)
     ]
     
+    let rainBackgroundStops: [Gradient.Stop] = [
+        .init(color: .rainStart, location: 0),
+        .init(color: .rainEnd, location: 1)
+    ]
+    
     var starOpacity: Double {
         let color = starStops.interpolated(amount: time)
         return color.getComponents().alpha
@@ -86,6 +91,8 @@ struct ContentView: View {
                 .opacity(starOpacity)
             
             SunView(progress: time)
+                .opacity(sunOpacity)
+                .animation(.easeInOut(duration: 2), value: sunOpacity)
             
             CloudsView(
                 thickness: cloudThickness,
@@ -104,10 +111,17 @@ struct ContentView: View {
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            LinearGradient(colors: [
-                backgroundTopStops.interpolated(amount: time),
-                backgroundBottomStops.interpolated(amount: time)
-            ], startPoint: .top, endPoint: .bottom)
+            ZStack {
+                LinearGradient(colors: [
+                    backgroundTopStops.interpolated(amount: time),
+                    backgroundBottomStops.interpolated(amount: time)
+                ], startPoint: .top, endPoint: .bottom)
+                
+                LinearGradient(stops: rainBackgroundStops, startPoint: .top, endPoint: .bottom)
+                    .opacity(rainBackgroundOpacity)
+            }
+                .ignoresSafeArea()
+                .animation(.easeInOut(duration: 1), value: rainBackgroundOpacity)
         )
         .safeAreaInset(edge: .bottom) {
             VStack {
@@ -180,6 +194,22 @@ struct ContentView: View {
         let start = Calendar.current.startOfDay(for: Date.now)
         let advanced = start.addingTimeInterval(time * 24 * 60 * 60)
         return advanced.formatted(date: .omitted, time: .shortened)
+    }
+    
+    var sunOpacity: Double {
+        if stormType == .none {
+            return 1
+        } else {
+            return 0
+        }
+    }
+    
+    var rainBackgroundOpacity: Double {
+        if stormType != .none && (0.38...0.7).contains(time) {
+            return 1
+        } else {
+            return 0
+        }
     }
 }
 
