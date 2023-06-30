@@ -100,10 +100,12 @@ struct ContentView: View {
                 bottomTint: cloudBottomStops.interpolated(amount: time)
             )
             
-            LightningView(maximumBolts: Int(maximumBolts), forkProbability: Int(forkProbability))
-            
             if stormType != .none {
                 StrormView(type: stormType, direction: .degrees(rainAngle), strenght: Int(rainIntensity))
+            }
+            
+            if stormType == .thunderstorm {
+                LightningView(maximumBolts: Int(maximumBolts), forkProbability: Int(forkProbability))
             }
             
             WeatherDetailsView(tintColor: backgroundTopStops.interpolated(amount: time), residueType: stormType, residueStrenght: rainIntensity)
