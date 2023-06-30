@@ -158,7 +158,7 @@
 		5AECB70E2A44E4C9008AB807 = {
 			isa = PBXGroup;
 			children = (
-				5AECB7192A44E4C9008AB807 /* WeatherBackgroundUITest */,
+				5AECB7192A44E4C9008AB807 /* WeatherBackground */,
 				5AECB7182A44E4C9008AB807 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5AECB7192A44E4C9008AB807 /* WeatherBackgroundUITest */ = {
+		5AECB7192A44E4C9008AB807 /* WeatherBackground */ = {
 			isa = PBXGroup;
 			children = (
 				5AECB71A2A44E4C9008AB807 /* WeatherBackgroundUITestApp.swift */,
@@ -186,7 +186,7 @@
 				5AECB71E2A44E4CA008AB807 /* Assets.xcassets */,
 				5AECB7202A44E4CA008AB807 /* Preview Content */,
 			);
-			path = WeatherBackgroundUITest;
+			path = WeatherBackground;
 			sourceTree = "<group>";
 		};
 		5AECB7202A44E4CA008AB807 /* Preview Content */ = {
@@ -418,7 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherBackgroundUITest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeatherBackground/Preview Content\"";
 				DEVELOPMENT_TEAM = G2S5NXG875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherBackgroundUITest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeatherBackground/Preview Content\"";
 				DEVELOPMENT_TEAM = G2S5NXG875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
